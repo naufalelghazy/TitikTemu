@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TitikTemu - Ngopi, Nongkrong, Kerja</title>
+    <meta name="description" content="Tempat terbaik untuk ngopi, nongkrong, dan kerja (WFC) dengan fasilitas lengkap. WiFi cepat, banyak colokan, dan suasana nyaman.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <img src="images/logo.png" alt="Logo" class="logo-img">
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="fasilitas.html">Fasilitas</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="promo.html">Promo</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="booking.html" class="btn btn-primary">Reserve Seat</a>
+                <div class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1 class="hero-title">Ngopi, Nongkrong, <br>Kerja di <span class="highlight">Satu Tempat</span></h1>
+            <p class="hero-subtitle">Rasakan pengalaman WFC terbaik dengan kopi premium dan internet super cepat.</p>
+            <div class="hero-buttons">
+                <a href="menu.html" class="btn btn-primary">Order Now</a>
+                <a href="fasilitas.html" class="btn btn-outline">Lihat Fasilitas</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <i class="fas fa-wifi"></i>
+                    <span>100 Mbps</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-plug"></i>
+                    <span>Power Socket</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-couch"></i>
+                    <span>Cozy Space</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="images/hero.png" alt="Coffee Shop Interior" class="img-fluid">
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Fasilitas Kami</h2>
+                <p>Didesain untuk produktivitas dan kenyamanan Anda.</p>
+            </div>
+            <div class="facilities-grid">
+                <div class="facility-card">
+                    <div class="icon-box"><i class="fas fa-wifi"></i></div>
+                    <h3>High-Speed WiFi</h3>
+                    <p>Koneksi stabil hingga 100 Mbps untuk meeting lancar.</p>
+                </div>
+                <div class="facility-card">
+                    <div class="icon-box"><i class="fas fa-bolt"></i></div>
+                    <h3>Banyak Colokan</h3>
+                    <p>Tersedia stopkontak di setiap meja.</p>
+                </div>
+                <div class="facility-card">
+                    <div class="icon-box"><i class="fas fa-chair"></i></div>
+                    <h3>Ergonomic & Cozy</h3>
+                    <p>Kursi kerja ergonomis dan sofa santai.</p>
+                </div>
+                <div class="facility-card">
+                    <div class="icon-box"><i class="fas fa-tree"></i></div>
+                    <h3>Indoor & Outdoor</h3>
+                    <p>Pilihan area AC atau area merokok yang sejuk.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Preview Section -->
+    <section id="menu" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Menu Favorit</h2>
+                <p>Teman setia saat kerja maupun santai.</p>
+            </div>
+            <div class="menu-grid" style="margin-bottom: 40px;">
+                <!-- Preview Items (Just 3) -->
+                <div class="menu-card">
+                    <img src="images/kopi_susu.png" alt="Kopi Susu Gula Aren" class="img-fluid">
+                    <div class="menu-info">
+                        <h3>Kopi Susu Gula Aren</h3>
+                        <p>Blend arabika robusta dengan gula aren asli.</p>
+                        <span class="price">Rp 25.000</span>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <img src="images/matcha.png" alt="Matcha Latte" class="img-fluid">
+                    <div class="menu-info">
+                        <h3>Matcha Latte</h3>
+                        <p>Premium matcha Jepang dengan susu segar.</p>
+                        <span class="price">Rp 28.000</span>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <img src="images/croissant.png" alt="Butter Croissant" class="img-fluid">
+                    <div class="menu-info">
+                        <h3>Butter Croissant</h3>
+                        <p>Flaky, buttery, dan fresh baked setiap pagi.</p>
+                        <span class="price">Rp 22.000</span>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <a href="menu.html" class="btn btn-primary">Lihat Menu Lengkap</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo Section -->
+    <section id="promo" class="section">
+        <div class="container promo-container">
+            <div class="promo-content">
+                <h2>Promo Spesial</h2>
+                <p>Hemat lebih banyak dengan paket bundling kami. Ada paket WFC, Student Bundle, dan Couple Date.</p>
+                <ul class="promo-list">
+                    <li><i class="fas fa-check"></i> Paket WFC Hemat</li>
+                    <li><i class="fas fa-check"></i> Student Bundle</li>
+                    <li><i class="fas fa-check"></i> Couple Date</li>
+                </ul>
+                <a href="promo.html" class="btn btn-primary">Lihat Semua Promo</a>
+            </div>
+            <div class="promo-image">
+                <img src="images/latte.png" alt="Latte Art" style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 0 24px 24px 0;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section bg-testimonial text-white">
+        <div class="container">
+            <div class="section-header">
+                <h2>Kata Mereka</h2>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-track">
+                    <!-- Slide 1 -->
+                    <div class="testi-card">
+                        <p>"Tempatnya pewe banget buat nugas. WiFi kenceng, playlist lagunya juga enak."</p>
+                        <div class="user">
+                            <h4>Sarah</h4>
+                            <span>Mahasiswa</span>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="testi-card">
+                        <p>"Sering meeting online di sini aman banget. Gak berisik dan kopinya enak."</p>
+                        <div class="user">
+                            <h4>Raka</h4>
+                            <span>Freelancer</span>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="testi-card">
+                        <p>"Hidden gem di Karawang! Suasananya tenang, baristanya ramah, kopinya mantap."</p>
+                        <div class="user">
+                            <h4>Dinda</h4>
+                            <span>Content Creator</span>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="testi-card">
+                        <p>"Favorite spot buat kerja remote. Colokan banyak, internet stabil parah!"</p>
+                        <div class="user">
+                            <h4>Budi</h4>
+                            <span>Programmer</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation Buttons -->
+                <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+                
+                <!-- Dots -->
+                <div class="slider-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Map -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Lokasi Kami</h2>
+                <p>Temukan kami di pusat kota Karawang.</p>
+            </div>
+            <div style="width: 100%; height: 400px; border-radius: 24px; overflow: hidden; border: 1px solid var(--border);">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.544865773173!2d107.2995653147696!3d-6.323347995423589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69762c660072ad%3A0x64426569107908b9!2sJl.%20Tuparev%20No.186%2C%20Nagasari%2C%20Kec.%20Karawang%20Bar.%2C%20Kabupaten%20Karawang%2C%20Jawa%20Barat%2041312!5e0!3m2!1sen!2sid!4v1679821234567!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>TitikTemu.</h3>
+                <p>Ngopi, Nongkrong, Kerja.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Lokasi</h4>
+                <p>Jalan Tuparev, Nagasari, Karawang</p>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TitikTemu Coffee. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <button id="backToTop" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

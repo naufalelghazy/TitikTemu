@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - KopiSpace</title>
+    <meta name="description" content="Daftar menu lengkap KopiSpace. Kopi, Non-Kopi, dan Snack favorit untuk menemani WFC kamu.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Adjustment for menu page since it has no hero */
+        #menu {
+            padding-top: 120px;
+            min-height: 80vh;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <img src="images/logo.png" alt="Logo" class="logo-img">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="fasilitas.html">Fasilitas</a></li>
+                <li><a href="menu.html" class="active" style="color: var(--primary);">Menu</a></li>
+                <li><a href="promo.html">Promo</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="booking.html" class="btn btn-primary">Reserve Seat</a>
+                <div class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Daftar Menu</h2>
+                <p>Pilihan terbaik untuk menemani harimu.</p>
+            </div>
+            <div class="menu-categories">
+                <button class="cat-btn active" data-filter="all">All</button>
+                <button class="cat-btn" data-filter="kopi">Kopi</button>
+                <button class="cat-btn" data-filter="non-kopi">Non-Kopi</button>
+                <button class="cat-btn" data-filter="snack">Snack</button>
+            </div>
+            <div class="menu-grid">
+                <!-- Kopi Items -->
+                <div class="menu-card" data-category="kopi">
+                    <img src="images/kopi_susu.png" alt="Kopi Susu Gula Aren" class="img-fluid">
+                    <div class="menu-info">
+                        <h3>Kopi Susu Gula Aren</h3>
+                        <p>Kopi susu creamy dengan gula aren asli. Manisnya pas, kopinya nendang!</p>
+                        <span class="price">Rp 25.000</span>
+                    </div>
+                </div>
+                <div class="menu-card" data-category="kopi">
+                    <img src="images/caramel_macchiato.png" alt="Caramel Macchiato" class="img-fluid">
+                    <div class="menu-info">
+                        <h3>Caramel Macchiato</h3>
+                        <p>Espresso + Susu + Karamel = Perfect mood booster. Manis, gurih, dan lembut.</p>
+                        <span class="price">Rp 32.000</span>
+                    </div>
+                </div>
+                <div class="menu-card" data-category="kopi">
+                    <img src="images/v60.png" alt="Manual Brew V60" class="img-fluid">
+                    <div class="menu-info">
+                        <h3>Manual Brew V60</h3>
+                        <p>Seduhan manual tanpa ampas. Rasakan notes buah/bunga yang unik dari beans pilihan kami.</p>
+                        <span class="price">Rp 28.000</span>
+                    </div>
+                </div>
+                <div class="menu-card" data-category="kopi">
+                    <img src="images/americano.png" alt="Americano" class="img-fluid">
+                    <div class="menu-info">
+                        <h3>Americano</h3>
+                        <p>Kopi hitam tanpa gula. Ringan, segar, dan bikin melek seharian.</p>
+                        <span class="price">Rp 18.000</span>
+                    </div>
+                </div>
+                <div class="menu-card" data-category="kopi">
+                    <img src="images/vanilla_latte.png" alt="Vanilla Latte" class="img-fluid">
+                    <div class="menu-info">
+                        <h3>Vanilla Latte</h3>
+                        <p>Kopi susu lembut dengan aroma vanila yang wangi banget. Manisnya bikin rileks..</p>
+                        <span class="price">Rp 22.000</span>
+                    </div>
+                </div>
+                <div class="menu-card" data-category="kopi">
+                    <img src="images/espresso.png" alt="Espresso" class="img-fluid">
+                    <div class="menu-info">
+                        <h3>Espresso</h3>
+                        <p>Pure coffee shot. Kuat, pekat, dan tanpa basa-basi. Cocok buat yang butuh fokus instan.</p>
+                        <span class="price">Rp 14.000</span>
+                    </div>
+                </div>
+
+                <!-- Non-Kopi Items -->
+                <div class="menu-card" data-category="non-kopi">
+                    <img src="images/matcha.png" alt="Matcha Latte" class="img-fluid">
+                    <div class="menu-info">
+                        <h3>Matcha Latte</h3>
+                        <p>Matcha Jepang asli + Susu segar. Wangi, creamy, dan earthy. Pecinta matcha wajib coba!</p>
+                        <span class="price">Rp 28.000</span>
+                    </div>
+                </div>
+                <div class="menu-card" data-category="non-kopi">
+                    <img src="images/chocolate.png" alt="Signature Chocolate" class="img-fluid">
+                    <div class="menu-info">
+                        <h3>Signature Chocolate</h3>
+                        <p>Bukan cokelat biasa. Pakai Cokelat Belgia asli yang kental dan nyoklat banget.</p>
+                        <span class="price">Rp 30.000</span>
+                    </div>
+                </div>
+                <div class="menu-card" data-category="non-kopi">
+                    <img src="images/red_velvet.png" alt="Red Velvet Latte" class="img-fluid">
+                    <div class="menu-info">
+                        <h3>Red Velvet Latte</h3>
+                        <p>Minuman rasa kue Red Velvet. Manis, creamy, dan warnanya instagrammable banget</p>
+                        <span class="price">Rp 26.000</span>
+                    </div>
+                </div>
+                <div class="menu-card" data-category="non-kopi">
+                    <img src="images/taro.png" alt="Taro Latte" class="img-fluid">
+                    <div class="menu-info">
+                        <h3>Taro Latte</h3>
+                        <p>Perpaduan manis dan gurih khas Taro yang lembut. Unik dan bikin nagih.</p>
+                        <span class="price">Rp 26.000</span>
+                    </div>
+                </div>
+                <div class="menu-card" data-category="non-kopi">
+                    <img src="images/lemon_tea.png" alt="Ice Lemon Tea" class="img-fluid">
+                    <div class="menu-info">
+                        <h3>Ice Lemon Tea</h3>
+                        <p>Teh asli dengan perasan lemon segar. Segernya bikin melek, gak bikin eneg.</p>
+                        <span class="price">Rp 18.000</span>
+                    </div>
+                </div>
+                <div class="menu-card" data-category="non-kopi">
+                    <img src="images/lychee_tea.png" alt="Lychee Tea" class="img-fluid">
+                    <div class="menu-info">
+                        <h3>Lychee Tea</h3>
+                        <p>Es teh manis dengan topping buah leci asli. Wangi, segar, dan tropis abis.</p>
+                        <span class="price">Rp 22.000</span>
+                    </div>
+                </div>
+
+                <!-- Snack Items -->
+                <div class="menu-card" data-category="snack">
+                    <img src="images/croissant.png" alt="Butter Croissant" class="img-fluid">
+                    <div class="menu-info">
+                        <h3>Butter Croissant</h3>
+                        <p>Renyah, flaky, dan buttery banget. Dipanggang fresh tiap pagi. Teman ngopi paling klop!</p>
+                        <span class="price">Rp 22.000</span>
+                    </div>
+                </div>
+                <div class="menu-card" data-category="snack">
+                    <img src="images/platter.png" alt="Mix Platter" class="img-fluid">
+                    <div class="menu-info">
+                        <h3>Mix Platter</h3>
+                        <p>Satu piring isi banyak! Sosis, Nugget, dan Fries jadi satu. Porsi jumbo, pas buat sharing rame-rame.</p>
+                        <span class="price">Rp 35.000</span>
+                    </div>
+                </div>
+                <div class="menu-card" data-category="snack">
+                    <img src="images/fries.png" alt="French Fries" class="img-fluid">
+                    <div class="menu-info">
+                        <h3>French Fries</h3>
+                        <p>Kentang goreng crispy dengan bumbu rahasia. Garingnya tahan lama, gurihnya bikin nagih.</p>
+                        <span class="price">Rp 20.000</span>
+                    </div>
+                </div>
+                <div class="menu-card" data-category="snack">
+                    <img src="images/onion_rings.png" alt="Onion Rings" class="img-fluid">
+                    <div class="menu-info">
+                        <h3>Onion Rings</h3>
+                        <p>Bawang bombay goreng tepung yang kriuk abis. Gurih, manis, dan crunchy dalam satu gigitan.</p>
+                        <span class="price">Rp 22.000</span>
+                    </div>
+                </div>
+                <div class="menu-card" data-category="snack">
+                    <img src="images/churros.png" alt="Churros" class="img-fluid">
+                    <div class="menu-info">
+                        <h3>Churros</h3>
+                        <p>Donat panjang ala Spanyol + Saus Cokelat. Manis, hangat, dan crunchy. Snack manis antigagal.</p>
+                        <span class="price">Rp 25.000</span>
+                    </div>
+                </div>
+                <div class="menu-card" data-category="snack">
+                    <img src="images/dimsum.png" alt="Dimsum Mentai" class="img-fluid">
+                    <div class="menu-info">
+                        <h3>Dimsum Mentai</h3>
+                        <p>Dimsum ayam full daging disiram saus mentai bakar. Creamy, gurih, dan aromanya wangiii banget.</p>
+                        <span class="price">Rp 28.000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>TitikTemu.</h3>
+                <p>Ngopi, Nongkrong, Kerja.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Lokasi</h4>
+                <p>Jalan Tuparev, Nagasari, Karawang</p>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TitikTemu Coffee. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <button id="backToTop" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+    <script src="js/script.js"></script>
+</body>
+</html>
