@@ -884,10 +884,17 @@ footer {
 }
 
 .about-logo {
-    width: 30%;
-    height: 30%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 200px;
+    height: auto;
+    margin-top: 25px;
+    opacity: 0.9;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.about-logo:hover {
+    transform: scale(1.05);
+    opacity: 1;
 }
 
 .story-container {
