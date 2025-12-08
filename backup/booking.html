@@ -34,7 +34,7 @@
     </nav>
 
     <!-- Header -->
-    <header class="section-header page-header">
+    <header class="section-header" style="margin-top: 120px;">
         <h2>Reservasi Tempat</h2>
         <p>Amankan spot favoritmu untuk WFC atau nongkrong.</p>
     </header>
@@ -42,34 +42,34 @@
     <!-- Reservation Form -->
     <section class="section">
         <div class="container">
-            <div class="reservation-form reservation-box">
+            <div class="reservation-form" style="max-width: 600px; margin: 0 auto; background: rgb(30,30,30); padding: 30px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
                 <form>
-                    <div class="form-group">
-                        <label for="name" class="form-label">Nama Lengkap</label>
-                        <input type="text" id="name" placeholder="Masukkan nama kamu" class="form-input">
+                    <div style="margin-bottom: 20px;">
+                        <label for="name" style="display: block; margin-bottom: 8px; font-weight: 500; color: white;">Nama Lengkap</label>
+                        <input type="text" id="name" placeholder="Masukkan nama kamu" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
                     </div>
-                    <div class="form-group">
-                        <label for="date" class="form-label">Tanggal & Waktu</label>
-                        <input type="datetime-local" id="date" class="form-input">
+                    <div style="margin-bottom: 20px;">
+                        <label for="date" style="display: block; margin-bottom: 8px; font-weight: 500; color: white;">Tanggal & Waktu</label>
+                        <input type="datetime-local" id="date" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
                     </div>
-                    <div class="form-group">
-                        <label for="people" class="form-label">Jumlah Orang</label>
-                        <select id="people" class="form-select">
+                    <div style="margin-bottom: 20px;">
+                        <label for="people" style="display: block; margin-bottom: 8px; font-weight: 500; color: white;">Jumlah Orang</label>
+                        <select id="people" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
                             <option value="1">1 Orang</option>
                             <option value="2">2 Orang</option>
                             <option value="3-5">3-5 Orang</option>
                             <option value="5+">Lebih dari 5</option>
                         </select>
                     </div>
-                    <div class="form-group">
-                        <label for="phone" class="form-label">Nomor Telepon</label>
-                        <input type="tel" id="phone" placeholder="Masukkan nomor telepon kamu" class="form-input">
+                    <div style="margin-bottom: 20px;">
+                        <label for="phone" style="display: block; margin-bottom: 8px; font-weight: 500; color: white;">Nomor Telepon</label>
+                        <input type="tel" id="phone" placeholder="Masukkan nomor telepon kamu" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
                     </div>
-                    <div class="form-group">
-                        <label for="notes" class="form-label">Catatan Tambahan (Opsional)</label>
-                        <textarea id="notes" rows="3" placeholder="Misal: Butuh dekat colokan, area non-smoking, dll." class="form-textarea"></textarea>
+                    <div style="margin-bottom: 20px;">
+                        <label for="notes" style="display: block; margin-bottom: 8px; font-weight: 500; color: white;">Catatan Tambahan (Opsional)</label>
+                        <textarea id="notes" rows="3" placeholder="Misal: Butuh dekat colokan, area non-smoking, dll." style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-full">Booking Sekarang</button>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Booking Sekarang</button>
                 </form>
             </div>
         </div>
@@ -82,8 +82,8 @@
                 <h2>Lokasi Kami</h2>
                 <p>Temukan kami di pusat kota Karawang.</p>
             </div>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.544865773173!2d107.2995653147696!3d-6.323347995423589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69762c660072ad%3A0x64426569107908b9!2sJl.%20Tuparev%20No.186%2C%20Nagasari%2C%20Kec.%20Karawang%20Bar.%2C%20Kabupaten%20Karawang%2C%20Jawa%20Barat%2041312!5e0!3m2!1sen!2sid!4v1679821234567!5m2!1sen!2sid" width="100%" height="100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div style="width: 100%; height: 400px; border-radius: 24px; overflow: hidden; border: 1px solid var(--border);">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.544865773173!2d107.2995653147696!3d-6.323347995423589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69762c660072ad%3A0x64426569107908b9!2sJl.%20Tuparev%20No.186%2C%20Nagasari%2C%20Kec.%20Karawang%20Bar.%2C%20Kabupaten%20Karawang%2C%20Jawa%20Barat%2041312!5e0!3m2!1sen!2sid!4v1679821234567!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
