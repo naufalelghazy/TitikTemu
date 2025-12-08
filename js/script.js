@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Mobile Menu Toggle
+  // =============================================
+  // TOGGLE MENU MOBILE (HAMBURGER)
+  // =============================================
   const mobileToggle = document.querySelector(".mobile-toggle");
   const navLinks = document.querySelector(".nav-links");
 
@@ -7,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     mobileToggle.addEventListener("click", (e) => {
       e.stopPropagation();
       navLinks.classList.toggle("active");
-      // Toggle icon between bars and times
+      // Ganti ikon antara hamburger (bars) dan silang (times)
       const icon = mobileToggle.querySelector("i");
       if (icon) {
         icon.classList.toggle("fa-bars");
@@ -15,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Close menu when clicking outside
+    // Tutup menu saat klik di luar area menu
     document.addEventListener("click", (e) => {
       if (!navLinks.contains(e.target) && !mobileToggle.contains(e.target)) {
         navLinks.classList.remove("active");
@@ -27,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Close menu when clicking a nav link
+    // Tutup menu saat klik salah satu link navigasi
     navLinks.querySelectorAll("a").forEach(link => {
       link.addEventListener("click", () => {
         navLinks.classList.remove("active");
@@ -40,7 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Smooth Scroll for Anchor Links
+  // =============================================
+  // SMOOTH SCROLL UNTUK ANCHOR LINKS
+  // =============================================
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
@@ -49,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
         target.scrollIntoView({
           behavior: "smooth",
         });
-        // Close mobile menu if open
+        // Tutup menu mobile jika sedang terbuka
         if (window.innerWidth <= 768) {
           navLinks.style.display = "none";
         }
@@ -57,184 +61,208 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-    // Menu Filtering Logic
-    const catBtns = document.querySelectorAll('.cat-btn');
-    const menuItems = document.querySelectorAll('.menu-card');
+  // =============================================
+  // FILTER KATEGORI MENU
+  // =============================================
+  const catBtns = document.querySelectorAll('.cat-btn');
+  const menuItems = document.querySelectorAll('.menu-card');
 
-    if (catBtns.length > 0) {
-        catBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Remove active class from all buttons
-                catBtns.forEach(b => b.classList.remove('active'));
-                // Add active class to clicked button
-                btn.classList.add('active');
-    
-                const filterValue = btn.getAttribute('data-filter');
-    
-                menuItems.forEach(item => {
-                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                        item.style.display = 'block';
-                        // Add animation for smooth appearance
-                        item.style.animation = 'fadeIn 0.5s ease forwards';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
+  if (catBtns.length > 0) {
+    catBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Hapus class active dari semua tombol
+        catBtns.forEach(b => b.classList.remove('active'));
+        // Tambahkan class active ke tombol yang diklik
+        btn.classList.add('active');
+
+        const filterValue = btn.getAttribute('data-filter');
+
+        menuItems.forEach(item => {
+          if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+            item.style.display = 'block';
+            // Tambahkan animasi fade in
+            item.style.animation = 'fadeIn 0.5s ease forwards';
+          } else {
+            item.style.display = 'none';
+          }
         });
+      });
+    });
+  }
+
+  // =============================================
+  // LOGIKA FORM RESERVASI/BOOKING
+  // =============================================
+  const bookingForm = document.querySelector('.reservation-form form');
+  if (bookingForm) {
+    bookingForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const date = document.getElementById('date').value;
+      const people = document.getElementById('people').value;
+
+      if (name && date) {
+        alert(`Terima kasih ${name}! Reservasi Anda untuk ${people} orang pada tanggal ${new Date(date).toLocaleString()} telah kami terima. Kami akan menghubungi Anda segera.`);
+        bookingForm.reset();
+      } else {
+        alert('Mohon lengkapi data reservasi Anda.');
+      }
+    });
+  }
+
+  // =============================================
+  // ANIMASI SCROLL (FADE IN SAAT ELEMEN TERLIHAT)
+  // =============================================
+  const observerOptions = {
+    threshold: 0.1 // Trigger saat 10% elemen terlihat
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+
+  // =============================================
+  // LOGIKA FORM NEWSLETTER
+  // =============================================
+  const newsletterForm = document.querySelector('.newsletter-form');
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = newsletterForm.querySelector('input').value;
+      if (email) {
+        alert('Terima kasih telah berlangganan! Info promo terbaru akan dikirim ke ' + email);
+        newsletterForm.reset();
+      }
+    });
+  }
+
+  // =============================================
+  // TOMBOL KEMBALI KE ATAS (BACK TO TOP)
+  // =============================================
+  const backToTopBtn = document.getElementById('backToTop');
+  
+  if (backToTopBtn) {
+    // Tampilkan tombol saat scroll lebih dari 300px
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+
+    // Scroll ke atas saat tombol diklik
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+
+  // =============================================
+  // SLIDER TESTIMONIAL
+  // =============================================
+  const sliderTrack = document.querySelector('.testimonial-track');
+  const slides = document.querySelectorAll('.testi-card');
+  const prevBtn = document.querySelector('.slider-btn.prev');
+  const nextBtn = document.querySelector('.slider-btn.next');
+  const dotsContainer = document.querySelector('.slider-dots');
+  
+  if (sliderTrack && slides.length > 0) {
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+    let slideInterval;
+
+    // Buat dot indicator untuk setiap slide
+    slides.forEach((_, index) => {
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+      if (index === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => {
+        goToSlide(index);
+        resetInterval();
+      });
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.dot');
+
+    // Fungsi update dot yang aktif
+    function updateDots() {
+      dots.forEach((dot, index) => {
+        if (index === currentSlide) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
     }
 
-    // Booking Form Logic
-    const bookingForm = document.querySelector('.reservation-form form');
-    if (bookingForm) {
-        bookingForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const date = document.getElementById('date').value;
-            const people = document.getElementById('people').value;
-
-            if (name && date) {
-                alert(`Terima kasih ${name}! Reservasi Anda untuk ${people} orang pada tanggal ${new Date(date).toLocaleString()} telah kami terima. Kami akan menghubungi Anda segera.`);
-                bookingForm.reset();
-            } else {
-                alert('Mohon lengkapi data reservasi Anda.');
-            }
-        });
+    // Fungsi pindah ke slide tertentu
+    function goToSlide(index) {
+      if (index < 0) {
+        currentSlide = totalSlides - 1; // Kembali ke slide terakhir
+      } else if (index >= totalSlides) {
+        currentSlide = 0; // Kembali ke slide pertama
+      } else {
+        currentSlide = index;
+      }
+      
+      sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+      updateDots();
     }
 
-    // Scroll Animations (Fade In)
-    const observerOptions = {
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, observerOptions);
-
-    // Newsletter Logic
-    const newsletterForm = document.querySelector('.newsletter-form');
-    if (newsletterForm) {
-        newsletterForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const email = newsletterForm.querySelector('input').value;
-            if (email) {
-                alert('Terima kasih telah berlangganan! Info promo terbaru akan dikirim ke ' + email);
-                newsletterForm.reset();
-            }
-        });
+    // Fungsi slide berikutnya
+    function nextSlide() {
+      goToSlide(currentSlide + 1);
     }
 
-    // Back to Top Logic
-    const backToTopBtn = document.getElementById('backToTop');
-    
-    if (backToTopBtn) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopBtn.classList.add('visible');
-            } else {
-                backToTopBtn.classList.remove('visible');
-            }
-        });
-
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
+    // Fungsi slide sebelumnya
+    function prevSlide() {
+      goToSlide(currentSlide - 1);
     }
 
+    // Event listener untuk tombol prev/next
+    if (prevBtn && nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetInterval();
+      });
 
-    // Testimonial Slider Logic
-    const sliderTrack = document.querySelector('.testimonial-track');
-    const slides = document.querySelectorAll('.testi-card');
-    const prevBtn = document.querySelector('.slider-btn.prev');
-    const nextBtn = document.querySelector('.slider-btn.next');
-    const dotsContainer = document.querySelector('.slider-dots');
-    
-    if (sliderTrack && slides.length > 0) {
-        let currentSlide = 0;
-        const totalSlides = slides.length;
-        let slideInterval;
-
-        // Create Dots
-        slides.forEach((_, index) => {
-            const dot = document.createElement('div');
-            dot.classList.add('dot');
-            if (index === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => {
-                goToSlide(index);
-                resetInterval();
-            });
-            dotsContainer.appendChild(dot);
-        });
-
-        const dots = document.querySelectorAll('.dot');
-
-        function updateDots() {
-            dots.forEach((dot, index) => {
-                if (index === currentSlide) {
-                    dot.classList.add('active');
-                } else {
-                    dot.classList.remove('active');
-                }
-            });
-        }
-
-        function goToSlide(index) {
-            if (index < 0) {
-                currentSlide = totalSlides - 1;
-            } else if (index >= totalSlides) {
-                currentSlide = 0;
-            } else {
-                currentSlide = index;
-            }
-            
-            sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
-            updateDots();
-        }
-
-        function nextSlide() {
-            goToSlide(currentSlide + 1);
-        }
-
-        function prevSlide() {
-            goToSlide(currentSlide - 1);
-        }
-
-        if (prevBtn && nextBtn) {
-            nextBtn.addEventListener('click', () => {
-                nextSlide();
-                resetInterval();
-            });
-
-            prevBtn.addEventListener('click', () => {
-                prevSlide();
-                resetInterval();
-            });
-        }
-
-        function startInterval() {
-            slideInterval = setInterval(nextSlide, 5000);
-        }
-
-        function resetInterval() {
-            clearInterval(slideInterval);
-            startInterval();
-        }
-
-        // Initialize
-        startInterval();
+      prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetInterval();
+      });
     }
+
+    // Fungsi auto-slide setiap 5 detik
+    function startInterval() {
+      slideInterval = setInterval(nextSlide, 5000);
+    }
+
+    // Reset interval saat user berinteraksi
+    function resetInterval() {
+      clearInterval(slideInterval);
+      startInterval();
+    }
+
+    // Inisialisasi slider
+    startInterval();
+  }
 });
 
 
+// =============================================
+// FUNGSI TAMBAHAN: SCROLL INDICATOR
+// =============================================
 
-// When the user scrolls down 20px from the top of the document, show the button
+// Tampilkan tombol saat user scroll 20px dari atas
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -245,8 +273,8 @@ function scrollFunction() {
   }
 }
 
-// When the user clicks on the button, scroll to the top of the document
+// Scroll ke atas saat tombol diklik
 function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  document.body.scrollTop = 0; // Untuk Safari
+  document.documentElement.scrollTop = 0; // Untuk Chrome, Firefox, IE dan Opera
 }
